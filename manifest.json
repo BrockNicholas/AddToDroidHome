@@ -1,0 +1,21 @@
+{
+  "short_name": "Home",
+  "name": "Add to Home",
+  "icons": [
+    {
+      "src": "/img/icon1.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "theme_color": "#777777",
+  "background_color": "#777777",
+  "display": "standalone"
+  
+}

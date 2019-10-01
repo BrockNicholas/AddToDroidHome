@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <title>Add to Homescreen</title>
+  </head>
+
+  <body>
+
+    <p style='font-size: large'>Add to Homescreen</p>
+    <button id='btnInstall'>Trigger pop up prompt</button>
+
+    <script>
+
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+        .then(function(registration) {
+          console.log('Registration successful, scope is:', registration.scope);
+        })
+        .catch(function(error) {
+          console.log('Service worker registration failed, error:', error);
+        });
+      }
+
+      let deferredPrompt;
+
+      window.addEventListener('beforeinstallprompt', (e) => {
+        deferredPrompt = e;
+      });
+
+      document.getElementById("btnInstall").addEventListener('click', (e) => {
+        deferredPrompt.prompt();
+      });
+
+
+    </script>
+  </body>
+</html>
