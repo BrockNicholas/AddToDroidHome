@@ -5,7 +5,7 @@ Based on Google's documentation: https://developers.google.com/web/fundamentals/
 
 Because Android requires this code to be served from https, the easiest way to get this up and running is by placing it in an AWS S3 bucket, setting everything to public, and navigating to the index page's URL from Chrome on your Android device
 
-Since Android limits how frequently you can show this prompt, the best way to test it is to
+Since Android limits how frequently you can show this prompt, the best way to test it is to<br />
 -Enable this setting in Chrome: chrome://flags/#bypass-app-banner-engagement-checks
 -Restart chrome so that it takes effect
 -Hit the index page's URL
